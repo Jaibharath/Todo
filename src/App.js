@@ -27,7 +27,7 @@ class App extends Component {
     
     const todo = this.state.todos.find(x => x.text === todoText);
     if (todo) {
-      alert('Already exists');
+      alert('Already exists '+todoText);
     }
     else {
       const todos = this.state.todos.slice();

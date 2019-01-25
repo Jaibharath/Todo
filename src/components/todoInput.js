@@ -11,7 +11,12 @@ export default class ToDoInput extends React.Component {
     }
 
     addTodo() {
-        let text = 'Todo_'+(this.props.totalToDos+1);
+        // Generating some random number between 0 to 99, TO avoid Already Exist functionality frequently, 
+        // if not we can use the increment by one
+
+        // cosnt text = 'Todo_'+(this.props.totalToDos+ 1);
+        
+        const text = 'Todo_'+(this.props.totalToDos+Math.floor(Math.random() * 99) + 1);
         this.props.addTodo(text);
         
         // Below code I tried adding input field, After realized no need this.
