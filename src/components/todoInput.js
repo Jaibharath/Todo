@@ -11,7 +11,7 @@ export default class ToDoInput extends React.Component {
     }
 
     addTodo() {
-        let text = 'Todo_'+this.props.totalToDos;
+        let text = 'Todo_'+this.props.totalToDos+1;
         this.props.addTodo(text);
         
         // Below code I tried adding input field, After realized no need this.
